@@ -1,0 +1,179 @@
+mat-card {
+  background-color: #ffffff;
+  border-radius: 5px !important;
+  margin-bottom: 48px;
+  padding: 48px;
+}
+
+.idea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c8ea1;
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  margin-top: -70px;
+  margin-left: -32px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.posted-description {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.posted-description p {
+  margin: 5px;
+}
+
+.posted-description .workflow-container .edit {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.rating {
+  color: #ff9800;
+}
+
+.score {
+  color: #ffffff;
+  border-radius: 40%;
+  background-color: #ff9800;
+  padding: 1px 6px;
+}
+
+.ratings {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.posted-info,
+.posted-date,
+.posted-content {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.posted-content {
+  flex-direction: column;
+  margin-top: 12px !important;
+}
+
+.posted-date {
+  font-weight: 400;
+}
+
+.calendar_month {
+  margin-right: 5px;
+}
+
+.posted {
+  display: none;
+}
+
+.username {
+  color: #0d72ac;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.workflow, .assignees {
+  color: #0d72ac;
+  font-weight: 700;
+}
+
+.assignment {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin-left: 24px;
+  margin-top: -28px;
+}
+
+.idea > mat-icon {
+  color: white;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.mat-card-image {
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 1px 10px 12px 3px rgba(0,0,0,0.18);
+  -webkit-box-shadow: 1px 10px 12px 3px rgba(0,0,0,0.18);
+  -moz-box-shadow: 1px 10px 12px 3px rgba(0,0,0,0.18);
+  margin-top: 38px;
+}
+
+@media (max-width: 599px) {
+  .mat-card-image {
+    width: 100%;
+    margin: 0;
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 938px) {
+  mat-card {
+    padding-bottom: 16px;
+  }
+
+  .assignees-container {
+    order: 1;
+    margin-left: 15px;
+  }
+
+  .workflow-container {
+    order: 2;
+    margin-left: 18px;
+  }
+
+  .score-container {
+    order: 3;
+    margin-left: 15px;
+  }
+
+  .posted {
+    display: block;
+  }
+
+  .mat-card-image {
+    width: 400px;
+  }
+
+  .posted-content {
+    position: absolute;
+    align-items: flex-end;
+    top: 108px;
+    right: 48px;
+  }
+
+  .posted-description {
+    margin-top: 16px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .name {
+    position: absolute;
+    top: 170px;
+    left: 480px;
+  }
+}
+

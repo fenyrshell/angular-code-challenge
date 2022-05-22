@@ -1,0 +1,17 @@
+<div
+  class="search-results"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="150"
+  (scrolled)="onScroll()"
+>
+  <card-idea
+    *ngFor="let result of results"
+    [name]="result.name"
+    [rating]="result.rating"
+    [username]="result.username"
+    [workflow]="result.workflow"
+    [assignees]="result.assignees"
+    [posted-at]="result.createdAt"
+  ></card-idea>
+</div>

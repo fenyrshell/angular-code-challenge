@@ -1,0 +1,38 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div class="idea"><mat-icon>lightbulb_outlined</mat-icon></div>
+    <mat-icon class="assignment">assignment</mat-icon>
+  </mat-card-header>
+  <img mat-card-image src="/assets/image.png">
+  <mat-card-content>
+    <div class="posted-content">
+      <p class="posted-info">
+        <span class="posted">Posted</span>
+        <span class="username">{{username}}</span>
+        <span class="ratings">
+          <span *ngFor="let number of [0,1,2,3,4]">
+            <mat-icon class="rating" *ngIf="number < rating">star_rate</mat-icon>
+            <mat-icon class="rating" *ngIf="number >= rating">star_border</mat-icon>
+          </span>
+        </span>
+        ()
+      </p>
+      <p class="posted-date"><mat-icon class="calendar_month">calendar_month</mat-icon> {{postedAt}}</p>
+    </div>
+    <p class="name">{{name}}</p>
+    <div class="posted-description">
+      <div class="score-container">
+        <p>Review Score</p>
+        <span class="score">---</span>
+      </div>
+      <div class="workflow-container">
+        <p>Workflow <mat-icon class="edit">edit</mat-icon></p>
+        <p class="workflow">{{workflow}}</p>
+      </div>
+      <div class="assignees-container">
+        <p>Assignees</p>
+        <p class="assignees">{{assignees}}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

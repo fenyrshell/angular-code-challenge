@@ -1,0 +1,33 @@
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="UserName" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Select rating" formControlName="rating">
+            <mat-option value="0">0</mat-option>
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Assignees" formControlName="assignees"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Workflow" formControlName="workflow"></textarea>
+    </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Close</button>
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="!form.valid">Save</button>
+</mat-dialog-actions>
